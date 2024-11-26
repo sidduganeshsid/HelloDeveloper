@@ -2,10 +2,11 @@
 <html lang="en">
 
 
-<head>
+<head id="head">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HelloDeveloper</title>
+    <title>Hello Developer</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 
@@ -13,13 +14,14 @@
 
     <header>
         <center>
-            <h1>Hello Developer</h1>
+            <h1>Hello, Developer!</h1>
             <!-- <p><em>Pure HTML based project...</em></p> -->
             <hr />
             <nav>
                 <a href="#Technologies">Technologies</a> |
                 <a href="#Aptitude">Aptitude</a> |
-                <a href="#Github-Repos">Github Repositories</a>
+                <a href="#Github-Repos">Github Repositories</a> |
+                <button id="button" onclick="addCSS()">Toggle CSS</button>
             </nav>
             <hr>
         </center>
@@ -82,6 +84,11 @@
                     (Will Be Updated As the Course Progress...)
                 </center>
                 <hr align="center" size="5px" width="50%" />
+            </section>
+
+            <!-- JAVASCRIPT START -->
+            <section id="JAVASCRIPT">
+
             </section>
             <!-- APTITUDE -->
             <section id="Aptitude">
@@ -159,6 +166,19 @@
         </center>
     </footer>
 
+    <script>
+        let counter = 0
+        function addCSS() {
+            counter++
+            if (counter % 2 !== 0) {
+                document.getElementById("head").innerHTML = '  <title>Example HTML Website</title> \n<link rel="stylesheet" href="./style.css" />'
+            } else {
+
+                document.getElementById("head").innerHTML = '  <title>Example HTML Website</title> '
+
+            }
+        }
+    </script>
 </body>
 
 
